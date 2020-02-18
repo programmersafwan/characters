@@ -27,10 +27,10 @@ class Form extends Component {
             let symbols=[];
             let number=[];
         
-            let frequencyv = [string.length];
-            let frequencyc = [string.length];
-            let frequencys = [string.length];
-            let frequencyn = [string.length];
+            let frequencyv = [];
+            let frequencyc = [];
+            let frequencys = [];
+            let frequencyn = [];
 
             let string2 = string.split("")
             console.log(string2);
@@ -161,6 +161,16 @@ class Form extends Component {
             <label>Enter String</label>
             <input type="text" value={this.state.string} onChange={this.handleChange} />
           </form>
+            
+          <p>Output:</p>
+          <p>Alphabet - Vowel</p>
+          <p>{vowel + "(" + frequencyv + ")"}</p>
+          <p>Alphabet - Consonant</p>
+          <p>{consonant + "(" + frequencyc + ")"}</p>
+          <p>Number</p>
+          <p>{number + "(" + frequencyn + ")"}</p>
+          <p>Other Symbols</p>
+          <p>{symbols + "(" + frequencys + ")"}</p>
           </div>
           )
         
